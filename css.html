@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>4 Months With You, Palangga</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #8b5e3c, #1e3a5f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 90%;
+  max-width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 20px;
+  color: #fff;
+  display: none;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.btns {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #1e3a5f;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #8b5e3c;
+}
+</style>
+
+</head>
+<body>
+
+<div class="slider">
+
+  <div class="slide active" style="background-image: url('22.jpg');">
+    <div class="slide-content">
+      <h1>💙 4 MONTHS IN RELATIONSHIP WITH YOU, PALANGGA 🤎</h1>
+      <p>
+        Four beautiful months with you, palangga.  
+        Every smile, every hug, every moment we shared has become my favorite memory.  
+        Thank you for choosing me every day.  
+        I promise to love you today, tomorrow, and always.  
+        I love you so much, my palangga. 💕
+      </p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('11.jpg');">
+    <div class="slide-content">
+      <h2>📍 First Month</h2>
+      <p>
+        Our first month together was the beginning of our beautiful story.  
+        We were shy, excited, and full of dreams.  
+        That was the moment I knew my heart was already yours.  
+        I will stay with you even at your lowest, no matter how hard the situation is.Every moment we spent together felt like a dream I never wanted to wake up from. I loved discovering the little things that make you, you—your laugh, your kindness, your way of seeing the world. Even in silence, I felt our hearts speaking to each other. I am amazed at how quickly you became such an important part of my life. I promise to support you, to listen, and to be there for you through everything. The first month has shown me that what we have is truly special and worth holding onto. I can’t wait to see what the future holds for us, but for now, I just want to cherish every memory of this beautiful beginning. 😻
+      </p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('33.jpg');">
+    <div class="slide-content">
+      <h2>📍 Second Month</h2>
+      <p>
+        On our second month, we learned more about each other.  
+        We laughed more, talked deeper, and loved stronger.  
+        You are not just my boyfriend — you're also my safe place, my best friend, and my happiness. Every day with you feels brighter and more meaningful. I love how we can share our dreams, fears, and silly moments without hesitation. Your support and understanding make me feel truly seen and valued. I am grateful for every laugh, every hug, and every little adventure we share. Being with you has taught me what real love feels like. I promise to keep loving you, learning with you, and growing together. With you by my side, I know that every month ahead will be even more beautiful than the last. 💗
+      </p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('44.jpg');">
+    <div class="slide-content">
+      <h2>📍 Third Month</h2>
+      <p>
+        The third month taught us patience and understanding.  
+        Even in misunderstandings, our love grew stronger.  
+        I will always support you, pray for you, and stay with you no matter what. This month showed me how resilient we are together. I’ve learned to appreciate every little effort you make, and it makes me love you even more. Your presence brings me peace and happiness I can’t put into words. I promise to always listen, forgive, and grow with you through every challenge. Every smile and every kind word from you reminds me why I chose you. I am grateful for the love we share and the bond we continue to build. I look forward to many more months of learning, loving, and creating beautiful memories with you. 💋
+      </p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('55.jpg');">
+    <div class="slide-content">
+      <h2>📍 Fourth Month</h2>
+      <p>
+        Now we are in our fourth month, and my love for you is deeper than ever.  
+        Here's to many more months and years with you, palangga.  
+        Forever choosing you. These four months have been filled with laughter, love, and unforgettable memories. I cherish every moment we spend together, big or small. You have become my rock, my joy, and my inspiration every single day. I promise to keep supporting you, loving you, and standing by your side through everything. Being with you has made me a better person and taught me the true meaning of love. I am grateful for your patience, your kindness, and the way you make my heart feel at home. Here’s to us, palangga, and to a future full of love, happiness, and endless adventures together. 💙🤎
+      </p>
+    </div>
+  </div>
+
+  <div class="btns">
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+  </div>
+
+</div>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
+function next() {
+  index++;
+  if (index >= slides.length) index = 0;
+  showSlide(index);
+}
+
+function prev() {
+  index--;
+  if (index < 0) index = slides.length - 1;
+  showSlide(index);
+}
+</script>
+
+</body>
+</html>
